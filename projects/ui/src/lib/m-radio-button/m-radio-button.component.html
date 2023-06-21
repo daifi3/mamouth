@@ -1,0 +1,7 @@
+<div class="container" (click)="change()">
+    <div class="text">
+        <ng-content></ng-content>
+    </div>
+    <input type="radio" [checked]="isChecked" name="radio">
+    <span class="checkmark"></span>
+</div>

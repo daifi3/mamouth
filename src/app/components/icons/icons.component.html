@@ -1,0 +1,29 @@
+<div class="container">
+    <m-banner *ngIf="showBanner" (bannerClose)="onBannerClose()" [status]="status.Neutral" [isNotification]="true" [hideCloseButton]="false">
+        <pre > &#60;m-icon <code style="background-color: lightgrey; color:black; border-radius: 3px; padding:2px 3px;">[icon]="'{{selectedIcon}}'"</code>&#62;&#60;/m-icon&#62;</pre>
+    </m-banner>
+
+    <div class="title">
+         [ Mamouth Icons ]  
+    </div>
+
+        <div class="content">
+            <div class="box">
+                    <div class="title">
+                        Icons
+                    </div>
+                    <div class="box-content">
+                        <div *ngFor="let icon of icons" class="icon-container" (click)="getIcon(icon)">
+                            <div style="display: grid; justify-content: center;">
+                                <m-icon  [icon]="icon" [color]="'lightgrey'"></m-icon>
+                            </div> 
+                            <div style="width:100px;font-size: 10px;text-align: center;">{{icon}}</div>
+                        </div>
+                    </div>
+            </div>
+          
+          
+
+        </div>
+
+</div>

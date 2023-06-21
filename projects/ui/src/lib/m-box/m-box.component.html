@@ -1,0 +1,13 @@
+<div class="container"  [style.width]="width+'px'" [style.height]="height+'px'" #container>
+   <div class="title-container" #titleContainer [style.background-color]="headerBackColor">
+    <div class="title">
+        <div class="header">{{ header }}</div>
+        <div class="action" #chevron *ngIf="collapsible" (click)="toggleBox()"></div>
+    </div>
+
+   </div> 
+    
+    <div class="content" [style.background-color]="backColor" [style.overflow]="'auto'" #content>
+        <ng-content></ng-content>
+    </div>
+</div>

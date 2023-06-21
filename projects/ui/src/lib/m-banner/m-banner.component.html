@@ -1,0 +1,6 @@
+
+<div class="container" #banner>
+    <div class="message" *ngIf="dynamicContent">{{dynamicContent}}</div>
+    <div class="message" *ngIf="!dynamicContent"> <ng-content></ng-content></div>
+    <div class="action" *ngIf="!hideCloseButton" (click)="onClick()">Close</div>
+</div>

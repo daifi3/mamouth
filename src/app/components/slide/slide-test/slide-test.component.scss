@@ -1,0 +1,15 @@
+.container{
+    display: grid;
+    padding: 6px 12px;
+    gap: 25px;
+    grid-template-rows: min-content auto;
+    .message{
+        color:white;
+        font-size: 14px;
+    }
+    .action{
+        display: grid;
+        justify-content: end;
+    }
+
+}

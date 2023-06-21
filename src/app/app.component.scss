@@ -1,0 +1,44 @@
+
+@import '../assets/styles/theme.scss';
+
+.container {
+    display: grid;
+    grid-template-columns: min-content auto;
+    gap: 10px;
+    height:100vh;
+    background-color: rgba(211, 211, 211, 0.237);
+}
+
+.menu {
+    height:100%;
+    width:200px;
+    border-radius: 0px 10px 0px 0px;
+    overflow: hidden;
+    background-color: $high-contrast;
+    .scroll {
+       padding-top: 10px;
+       height: 100%;
+       overflow: auto;
+    }
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0px 0px 0px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.logo {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height:60px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bolder;
+    color: white;
+    border-bottom: 1px solid white
+}

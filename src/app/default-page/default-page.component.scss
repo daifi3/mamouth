@@ -1,0 +1,42 @@
+@import '../../assets/styles/theme.scss';
+.container {
+    display: grid;
+    grid-template-rows: min-content min-content min-content auto;
+    height:100%;
+    align-content: center;
+    gap: 20px;
+    .logo-container {
+        display: grid;
+        justify-content: center;
+    }
+    .title {
+        font-size: 48px;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+        color: $high-contrast;
+    }
+
+    .description {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+        color: $high-contrast;
+
+    }
+
+    .npm {
+        display: grid;
+        grid-template-columns: max-content max-content;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 12px;
+        gap: 10px;
+        text-align: center;
+        background-color: $xxlow-contrast;
+        .copy {
+            cursor: pointer;
+        }
+    }
+}

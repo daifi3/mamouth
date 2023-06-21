@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="title">
+         [ Mamouth RadioButton ]  
+    </div>
+
+        <div class="content">
+            <div class="box">
+                <div class="title">
+                    How to import 
+                </div>
+                <div class="box-content">
+                    
+                <pre><code style="color: green">// inside your app.module.ts</code>
+
+import {{ '{ MCheckboxModule } ' }} from '@mamouth/ui';
+
+ @NgModule({{'{'}}
+    declarations: [
+      AppComponent
+    ],
+    imports: [
+      BrowserModule,
+      AppRoutingModule,
+      <code style="background-color: lightgrey; color:black">MCheckboxModule</code>
+      ...
+
+
+
+<code style="color: green;">// inside your app.component.html</code>
+
+&#60;m-radio-button&#62;Mamouth&#60;/m-radio-button&#62;
+
+    </pre>
+                
+                </div>
+            </div>
+            <div class="box"> 
+                <div class="title">
+                    Api
+                </div>
+                <div class="box-content">
+                    <div class="input">
+                        <pre style="font-size: 19px;">@Input() isChecked = true | false </pre>
+                        <pre style="color:green"> &#60;m-radio-button <code style="background-color: lightgrey; color:black">[isChecked]="true"</code> &#62;Mamouth&#60;/m-radio-button&#62;</pre>
+                    </div>
+                
+                    <div class="input">
+                        <pre style="font-size: 19px;">@Input() isDisabled = true | false </pre>
+                        <pre style="color:green"> &#60;m-radio-button <code style="background-color: lightgrey; color:black">[isDisabled]="false"</code> &#62;Mamouth&#60;/m-radio-button&#62;</pre>
+                    </div>
+
+                    <div class="input">
+                        <pre style="font-size: 19px;">@Output() (mChange) : void </pre>
+                        <pre style="color:green"> &#60;m-radio-button <code style="background-color: lightgrey; color:black"> (mChange)="onMChange($event)"</code> &#62;Mamouth&#60;/m-radio-button&#62;</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="title">
+                    Example
+                </div>
+
+                <div class="box-content">
+
+                    <div class="emphasis">
+                        <div style="font-size: 22px;"> [isChecked] = true | false </div>
+                        {{state}}
+                        <m-radio-button [isChecked]="false" (mCheck)="onCheck($event)" > check me</m-radio-button>
+                    </div>
+
+                    <div class="emphasis">
+                        <div style="font-size: 22px;"> [isDisabled] = true | false</div>
+                        <m-radio-button [isDisabled]="true" (mCheck)="onCheck($event)" > check me</m-radio-button>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+</div>

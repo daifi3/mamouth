@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="menu">
+    <div class="logo" (click)="defaultPage()">
+          Mamouth UI 
+    </div>
+
+    <div class="scroll">
+      <app-menu-item 
+        *ngFor="let component of components"
+        [title]="component.name"
+        (itemClick)="onSelectItem($event)">
+      </app-menu-item>
+    </div>
+  </div>
+  <div class="content">
+          <app-default-page *ngIf="page === pages.Default"></app-default-page>
+          <app-button *ngIf="page === pages.Button"></app-button>
+          <app-banner *ngIf="page === pages.Banner"></app-banner>
+          <app-slide *ngIf="page === pages.Slide"></app-slide>
+          <app-checkbox *ngIf="page === pages.CheckBox"></app-checkbox>
+          <app-radio-button *ngIf="page === pages.RadioButton"></app-radio-button>
+          <app-input *ngIf="page === pages.Form"></app-input>
+          <app-icons *ngIf="page === pages.Icons"></app-icons>
+          <app-dialog *ngIf="page === pages.Dialog"></app-dialog>
+          <app-box *ngIf="page === pages.Box"></app-box>
+
+
+  </div>
+</div>

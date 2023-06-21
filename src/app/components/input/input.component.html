@@ -1,0 +1,128 @@
+<div class="container">
+    <div class="title">
+         [ Mamouth Form inputs ]  
+    </div>
+
+        <div class="content">
+            <div class="box">
+                <div class="title">
+                    How to import 
+                </div>
+                <div class="box-content">
+                    
+                <pre><code style="color: green">// inside your app.module.ts</code>
+
+import {{ '{ MInputModule } ' }} from '@mamouth/ui';
+
+ @NgModule({{'{'}}
+    declarations: [
+      AppComponent
+    ],
+    imports: [
+      BrowserModule,
+      AppRoutingModule,
+      <code style="background-color: lightgrey; color:black">MInputModule</code>
+      ...
+
+
+
+<code style="color: green;">// inside your app.component.html</code>
+
+&#60;m-input&#62;Mamouth&#60;/m-input&#62;
+
+    </pre>
+                </div>
+            </div>
+            <div class="box"> 
+                <div class="title">
+                    Api
+                </div>
+                <div class="box-content">
+                    <div class="input">
+                        <pre style="font-size: 19px;">@Input() isChecked = true | false </pre>
+                        <pre style="color:green"> &#60;m-input <code style="background-color: lightgrey; color:black">[isChecked]="true"</code> &#62;Mamouth&#60;/m-input&#62;</pre>
+                    </div>
+                
+                    <div class="input">
+                        <pre style="font-size: 19px;">@Input() isDisabled = true | false </pre>
+                        <pre style="color:green"> &#60;m-input <code style="background-color: lightgrey; color:black">[isDisabled]="false"</code> &#62;Mamouth&#60;/m-input&#62;</pre>
+                    </div>
+
+                    <div class="input">
+                        <m-icon [icon]="'airplay'"></m-icon>
+
+                        <pre style="font-size: 19px;">@Output() (mChange) : void </pre>
+                        <pre style="color:green"> &#60;m-input <code style="background-color: lightgrey; color:black"> (mChange)="onMChange($event)"</code> &#62;Mamouth&#60;/m-input&#62;</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="title">
+                    Example
+                </div>
+
+                <div class="box-content">
+
+                    <div class="emphasis">
+                        <div style="font-size: 22px;"> [type] = 'Text' </div>
+                        <div class="elements">
+                            <m-input [type]="type.Text" [emphasis]="'High'">High</m-input>
+                            <m-input [type]="type.Text" [emphasis]="'Medium'">Medium</m-input>
+                            <m-input [type]="type.Text" [emphasis]="'Low'">Low</m-input>
+                            <m-input [type]="type.Text" [emphasis]="'xLow'">xLow</m-input>
+                            <m-input [type]="type.Text" [emphasis]="'xxLow'">xxLow</m-input>
+                        </div>
+                    </div>
+
+                    <div class="emphasis">
+                        <div style="font-size: 22px;"> [type] = 'Password' </div>
+                        <div class="elements">
+                            <m-input [type]="type.Password" [emphasis]="'High'">High</m-input>
+                            <m-input [type]="type.Password" [emphasis]="'Medium'">Medium</m-input>
+                            <m-input [type]="type.Password" [emphasis]="'Low'">Low</m-input>
+                            <m-input [type]="type.Password" [emphasis]="'xLow'">xLow</m-input>
+                            <m-input [type]="type.Password" [emphasis]="'xxLow'">xxLow</m-input>
+                        </div>
+                    </div>
+
+                    <div class="emphasis">
+                        <div style="font-size: 22px;"> [type] = 'Email' </div>
+                        <div class="elements">
+                            <m-input [type]="type.Email" [emphasis]="'High'">High</m-input>
+                            <m-input [type]="type.Email" [emphasis]="'Medium'">Medium</m-input>
+                            <m-input [type]="type.Email" [emphasis]="'Low'">Low</m-input>
+                            <m-input [type]="type.Email" [emphasis]="'xLow'">xLow</m-input>
+                            <m-input [type]="type.Email" [emphasis]="'xxLow'">xxLow</m-input>
+                        </div>
+                    </div>
+
+                    <div class="emphasis">
+                        <div style="font-size: 22px;"> [type] = 'Number' </div>
+                        <div class="elements">
+                            <m-input [type]="type.Number" [width]="150" [emphasis]="'High'">High</m-input>
+                            <m-input [type]="type.Number" [emphasis]="'Medium'">Medium</m-input>
+                            <m-input [type]="type.Number" [emphasis]="'Low'">Low</m-input>
+                            <m-input [type]="type.Number" [emphasis]="'xLow'">xLow</m-input>
+                            <m-input [type]="type.Number" [emphasis]="'xxLow'">xxLow</m-input>
+                        </div>
+                    </div>
+
+
+                    <div class="emphasis">
+                        <div style="font-size: 22px;"> [type] = 'Select' </div>
+                        <div class="elements">
+                            <m-input [type]="type.Select" [items]="['salahedine','daifi']"  [emphasis]="'High'">High</m-input>
+                            <m-input [type]="type.Select" [emphasis]="'Medium'">Medium</m-input>
+                            <m-input [type]="type.Select" [emphasis]="'Low'">Low</m-input>
+                            <m-input [type]="type.Select" [emphasis]="'xLow'">xLow</m-input>
+                            <m-input [type]="type.Select" [emphasis]="'xxLow'">xxLow</m-input>
+                        </div>
+                    </div>
+
+                
+
+                </div>
+            </div>
+
+        </div>
+</div>

@@ -1,0 +1,12 @@
+@import '../../assets/styles/theme.scss';
+.container{
+    color: white;
+    padding: 8px 12px;
+    font-weight: 300;
+    &:hover {
+        background-color: $low-contrast;
+        cursor: pointer;
+        transition-duration: .2s;
+        transform: translateX(2px);
+    }
+}

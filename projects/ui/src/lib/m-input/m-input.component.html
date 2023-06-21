@@ -1,0 +1,40 @@
+<div class="container"  [style.width]="width+'px'">
+    <div class="header">
+        <ng-content></ng-content>
+    </div>
+
+    <div *ngIf="type === types.Text"  class="text-container">
+        <input [type]="type" >
+    </div>
+    
+    <div *ngIf="type === types.Password"  class="password-container">
+        <input [type]="type" #password>
+        <div class="icon" (click)="togglePassword()">
+            <div [class]="isShowed ? 'eye-off' : 'eye'"></div>
+        </div>
+    </div>
+
+    <div *ngIf="type === types.Number"  class="number-container">
+        <div class="decrement" (click)="decrement()">-</div>
+        <input [type]="type" #number value="0">
+        <div class="increment" (click)="increment()">+</div>
+    </div>
+
+    <div *ngIf="type === types.Email"  class="email-container">
+        <div class="email-icon">
+            <div class="email"></div>
+        </div>
+        <input [type]="type" #email >
+    </div>
+
+    <div *ngIf="type === types.Select"  class="select-container">
+        <div class="select-input">
+            <select>
+                <ul *ngFor="let item of items" >
+                    {{item}}
+                </ul>
+            </select>
+        </div>
+    </div>
+
+</div>

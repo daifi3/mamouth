@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="title">
+         [ Mamouth Banner ]  
+    </div>
+
+        <div class="content">
+            <div class="box">
+                <div class="title">
+                    How to import 
+                </div>
+                <div class="box-content">
+                    
+                <pre><code style="color: green">// inside your app.module.ts</code>
+
+import {{ '{ MBannerModule } ' }} from '@mamouth/ui';
+
+ @NgModule({{'{'}}
+    declarations: [
+      AppComponent
+    ],
+    imports: [
+      BrowserModule,
+      AppRoutingModule,
+      <code style="background-color: lightgrey; color:black">MBannerModule</code>
+      ...
+
+
+
+<code style="color: green;">// inside your app.component.html</code>
+
+&#60;m-banner&#62;Mamouth&#60;/m-banner&#62;
+
+    </pre>
+                
+                </div>
+            </div>
+            <div class="box"> 
+                <div class="title">
+                    Api
+                </div>
+                <div class="box-content">
+                    <div class="input">
+                        <pre style="font-size: 19px;">@Input() status = 'Success' | 'Warning' | 'Error' </pre>
+                        <pre style="color:green"> &#60;m-banner <code style="background-color: lightgrey; color:black">[status]="'Success'"</code> &#62;Mamouth&#60;/m-banner&#62;</pre>
+                    </div>
+                    <div class="input">
+                        <pre style="font-size: 19px;">@Input() hideCloseButton = true | false </pre>
+                        <pre style="color:green"> &#60;m-banner <code style="background-color: lightgrey; color:black">[hideCloseButton]="true"</code> &#62;Mamouth banner is awsome&#60;/m-banner&#62;</pre>
+                    </div>
+
+                    <div class="input">
+                        <pre style="font-size: 19px;">@Input() isNotification = true | false </pre>
+                        <pre style="color:green"> &#60;m-banner <code style="background-color: lightgrey; color:black">[isNotification]="false"</code> &#62;Mamouth banner is awsome&#60;/m-banner&#62;</pre>
+                    </div>
+
+                    <div class="input">
+                        <pre style="font-size: 19px;">@Output() (bannerClose) : void </pre>
+                        <pre style="color:green"> &#60;m-banner <code style="background-color: lightgrey; color:black"> (bannerClose)="onClose()"</code> &#62;Mamouth banner is awsome&#60;/m-banner&#62;</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="title">
+                    Example
+                </div>
+
+                <div class="box-content">
+                    <div class="emphasis">
+                        <div style="font-size: 22px;"> [status] = "'Success'"</div>
+                        <m-banner [status]="success"  (bannerClick)="onClick()">Mamouth banner is awsome</m-banner>
+                    </div>
+
+                    <div class="emphasis">
+                        <div style="font-size: 22px;"> [status] = "'Warning'"</div>
+                        <m-banner #banner [status]="warning"  (bannerClick)="onClick()">Mamouth banner is awsome</m-banner>
+                    </div>
+
+                    <div class="emphasis">
+                        <div style="font-size: 22px;"> [status] = "'Error'"</div>
+                        <m-banner [status]="error" (bannerClick)="onClick()">Mamouth banner is awsome</m-banner>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+</div>

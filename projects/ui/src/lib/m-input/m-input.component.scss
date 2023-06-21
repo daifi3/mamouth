@@ -1,0 +1,546 @@
+@import '../../../../../src/assets/styles/theme.scss';
+:host .container {
+    display: grid;
+    grid-template-rows: min-content auto;
+    width: 220px;
+    .header {
+        height:auto;
+        color: black;
+        background-color: #ffffff00;
+    }
+}
+
+input {
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  text-align: center;
+
+}
+
+input[type=number] {
+    appearance: text;
+    text-align: center;
+}
+
+
+select {
+    outline: none;
+    cursor: pointer;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-family: 'mamouth';
+}
+
+:host .container .password-container {
+    border-radius: 4px;
+    position: relative;
+    height: 32px;
+    .icon {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        width: 25px;
+        position: absolute;
+        right: 7px;
+        top: 0px;
+        cursor: pointer;
+        .eye {
+            -webkit-mask: url('../icons/eye.svg') no-repeat 50% 50%;
+            transform: scale(0.7);
+            height: 25px;
+            width: 25px;
+            background-color: white;
+        }
+
+        .eye-off {
+            -webkit-mask: url('../icons/eye-off.svg') no-repeat 50% 50%;
+            transform: scale(0.7);
+            height: 25px;
+            width: 25px;
+            background-color: white;
+        }
+    }
+
+    input {
+        height: 100%
+    }
+
+}
+
+:host .container .text-container {
+    border-radius: 4px;
+    height: 32px;
+    &:focus {
+        outline: 1px solid $medium-contrast;
+    }
+
+}
+
+:host .container .number-container {
+    border-radius: 4px;
+    position: relative;
+    height: 32px;
+    &:focus {
+        outline: 1px solid $medium-contrast;
+    }
+
+    .increment {
+        position: absolute;
+        right: 12px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .decrement {
+        position: absolute;
+        left: 16px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+}
+
+:host .container .email-container {
+    display: grid;
+    grid-auto-flow: column;
+    border-radius: 4px;
+    position: relative;
+    height: 32px;
+    input {
+        padding-left: 29px;
+        height:100%;
+    }
+    .email-icon {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        width: 25px;
+        position: absolute;
+        left: 2px;
+        top: 0px;
+        z-index: 1000;
+        cursor: pointer;
+        .email {
+            -webkit-mask: url('../icons/mail.svg') no-repeat 50% 50%;
+            transform: scale(0.7);
+            height: 25px;
+            width: 25px;
+            background-color: white;
+        }
+
+    }
+    &:focus {
+        outline: 1px solid $medium-contrast;
+    }
+
+
+}
+
+:host .container .select-container {
+    display: grid;
+    grid-auto-flow: dense;
+    border-radius: 4px;
+    position: relative;
+    height: 32px;
+.select-input:after {
+    content:'>';
+    font:18px "Consolas", monospace;
+    color: white;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+    right:14px;
+    top:4px;
+    padding:0 0 2px;
+    position:absolute;
+    pointer-events:none;
+}
+.select-input:before {
+    content:'';
+    right:6px; top:0px;
+    width:20px; height:20px;
+    background:transparent;
+    position:absolute;
+    pointer-events:none;
+    display:block;
+}
+
+    .select-input {
+        height: 32px;
+        position: relative;
+        .chevron {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            width: 25px;
+            position: absolute;
+            right: 7px;
+            top: 0px;
+            cursor: pointer;
+            .icon {
+                -webkit-mask: url('../icons/chevron-down.svg') no-repeat 50% 50%;
+                transform: scale(0.7);
+                height: 25px;
+                width: 25px;
+                background-color: white;
+            }
+        }
+
+        select{
+            height: 100%;
+        }
+        
+    } 
+
+    &:focus {
+        outline: 1px solid $medium-contrast;
+    }
+
+
+}
+
+
+
+
+
+
+
+:host(.emphasis-high) .container {
+    .password-container {
+        border-radius: 5px 0px 0px 5px;
+        input {
+            background-color: $high-contrast;
+            border:none;
+            height:100%;
+            color: white;
+            font-family: 'mamouth';
+            padding: 0px 30px 0px 12px;
+        }
+    }
+
+    .text-container {
+        border-radius: 5px 0px 0px 5px;
+        input {
+            background-color: $high-contrast;
+            height:100%;
+            border:none;
+            color: white;
+            font-family: 'mamouth';
+            padding: 0px 12px;
+        }
+    }
+
+    .number-container {
+        border-radius: 5px 0px 0px 5px;
+        display: flex;
+        align-items: center;
+        input {
+            background-color: $high-contrast;
+            height:100%;
+            border:none;
+            color: white;
+            font-family: 'mamouth';
+        }
+
+    }
+
+    .email-container {
+        border-radius: 5px 0px 0px 5px;
+
+        input {
+            background-color: $high-contrast;
+            height:100%;
+            border:none;
+            color: white;
+            font-family: 'mamouth';
+        }
+    }
+
+    .select-container {
+        display: grid;
+        border-radius: 4px;
+        position: relative;
+        height: 32px;
+        select {
+            border:none;
+            width: 100%;
+            height: 32px;
+            background-color: $high-contrast;
+            color: white;
+            -moz-appearance:none; /* Firefox */
+            -webkit-appearance:none; /* Safari and Chrome */
+            appearance:none;
+        }
+        &:focus {
+            outline: 1px solid $medium-contrast;
+        }
+    
+    
+    }
+   
+   input {
+    &:focus {
+        outline: 1px solid $medium-contrast;
+       }
+   }
+   
+    
+}
+
+:host(.emphasis-medium) .container {
+    .password-container {
+        border-radius: 5px 0px 0px 5px;
+        input {
+            background-color: $medium-contrast;
+            border:none;
+            height:100%;
+            color: white;
+            font-family: 'mamouth';
+            padding: 0px 30px 0px 12px;
+        }
+    }
+
+    .text-container {
+        border-radius: 5px 0px 0px 5px;
+        input {
+            background-color: $medium-contrast;
+            height:100%;
+            border:none;
+            color: white;
+            font-family: 'mamouth';
+            padding: 0px 12px;
+        }
+    }
+
+    .number-container {
+        border-radius: 5px 0px 0px 5px;
+        display: flex;
+        align-items: center;
+        input {
+            background-color: $medium-contrast;
+            height:100%;
+            border:none;
+            color: white;
+            font-family: 'mamouth';
+        }
+
+    }
+
+    .email-container {
+        border-radius: 5px 0px 0px 5px;
+
+        input {
+            background-color: $medium-contrast;
+            height:100%;
+            border:none;
+            color: white;
+            font-family: 'mamouth';
+        }
+    }
+   
+   input {
+    &:focus {
+        outline: 1px solid $medium-contrast;
+       }
+   }
+   
+}
+
+:host(.emphasis-low) .container {
+    .password-container {
+        border-radius: 5px 0px 0px 5px;
+        input {
+            background-color: $low-contrast;
+            border:none;
+            height:100%;
+            color: white;
+            font-family: 'mamouth';
+            padding: 0px 30px 0px 12px;
+        }
+    }
+
+    .text-container {
+        border-radius: 5px 0px 0px 5px;
+        input {
+            background-color: $low-contrast;
+            height:100%;
+            border:none;
+            color: white;
+            font-family: 'mamouth';
+            padding: 0px 12px;
+        }
+    }
+
+    .number-container {
+        border-radius: 5px 0px 0px 5px;
+        display: flex;
+        align-items: center;
+        input {
+            background-color: $low-contrast;
+            height:100%;
+            border:none;
+            color: white;
+            font-family: 'mamouth';
+        }
+
+    }
+
+    .email-container {
+        border-radius: 5px 0px 0px 5px;
+
+        input {
+            background-color: $low-contrast;
+            height:100%;
+            border:none;
+            color: white;
+            font-family: 'mamouth';
+        }
+    }
+   
+   input {
+    &:focus {
+        outline: 1px solid $medium-contrast;
+       }
+   }
+   
+}
+
+:host(.emphasis-xlow) .container{
+    .password-container {
+        border-radius: 5px 0px 0px 5px;
+        input {
+            background-color: $xlow-contrast;
+            border:none;
+            height:100%;
+            color: white;
+            font-family: 'mamouth';
+            padding: 0px 30px 0px 12px;
+        }
+    }
+
+    .text-container {
+        border-radius: 5px 0px 0px 5px;
+        input {
+            background-color: $xlow-contrast;
+            height:100%;
+            border:none;
+            color: white;
+            font-family: 'mamouth';
+            padding: 0px 12px;
+        }
+    }
+
+    .number-container {
+        border-radius: 5px 0px 0px 5px;
+        display: flex;
+        align-items: center;
+        input {
+            background-color: $xlow-contrast;
+            height:100%;
+            border:none;
+            color: white;
+            font-family: 'mamouth';
+        }
+
+    }
+
+    .email-container {
+        border-radius: 5px 0px 0px 5px;
+
+        input {
+            background-color: $xlow-contrast;
+            height:100%;
+            border:none;
+            color: white;
+            font-family: 'mamouth';
+        }
+    }
+   
+   input {
+    &:focus {
+        outline: 1px solid $medium-contrast;
+       }
+   }
+   
+}
+
+:host(.emphasis-xxlow) .container {
+
+    .password-container {
+        border-radius: 5px 0px 0px 5px;
+        input {
+            background-color: $xxlow-contrast;
+            border:none;
+            height:100%;
+            color: $high-contrast;
+            font-family: 'mamouth';
+            padding: 0px 30px 0px 12px;
+        }
+        .icon .eye, .icon .eye-off{
+            background-color: $high-contrast
+        }
+    }
+
+    .text-container {
+        border-radius: 5px 0px 0px 5px;
+        input {
+            background-color: $xxlow-contrast;
+            height:100%;
+            border:none;
+            color: $high-contrast;
+            font-family: 'mamouth';
+            padding: 0px 12px;
+        }
+    }
+
+    .number-container {
+        border-radius: 5px 0px 0px 5px;
+        display: flex;
+        align-items: center;
+        input {
+            background-color: $xxlow-contrast;
+            height:100%;
+            border:none;
+            color: $high-contrast;
+            font-family: 'mamouth';
+        }
+
+        .increment, .decrement {
+            color: $high-contrast;
+        }
+
+    }
+
+    .email-container {
+        border-radius: 5px 0px 0px 5px;
+
+        input {
+            background-color: $xxlow-contrast;
+            height:100%;
+            border:none;
+            color: $high-contrast;
+            font-family: 'mamouth';
+        }
+
+        .email-icon .email {
+            background-color: $high-contrast;
+        }
+    }
+   
+   input {
+    &:focus {
+        outline: 1px solid $medium-contrast;
+       }
+   }
+   
+
+}
+

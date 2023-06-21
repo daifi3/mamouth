@@ -1,0 +1,22 @@
+<div class="container">
+        <div class="logo-container">
+                <img src="../../assets/mamouth.svg" width="200" height="200" alt="">
+        </div>
+        <div class="title">Mamouth UI</div>
+        <div class="description">Welcome to the fully new Angular UI kit </div>
+
+        <div class="npm">
+                <div class="install">
+                      <pre>npm install @mamouth/ui@latest</pre> 
+                </div>
+                <div class="copy">
+                        <span *ngIf="!copied" (click)="onCopy()" class="material-symbols-rounded">
+                                content_copy
+                                </span>
+
+                        <span *ngIf="copied" class="material-symbols-rounded">
+                                check_circle
+                                </span>
+                </div>
+        </div>
+</div>

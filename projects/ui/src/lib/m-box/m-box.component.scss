@@ -1,0 +1,45 @@
+@import '../../../../../src/assets/styles/theme.scss';
+.container {
+    display: grid;
+    grid-template-rows: min-content auto;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+
+    overflow: hidden;
+    transition: height .4s;
+    box-shadow: -3px 3px 10px rgba(34, 34, 34, 0.511);
+    .title-container {
+        padding: 5px 12px;
+        background-color: $high-contrast;
+        z-index: 1000;
+
+        overflow: hidden;
+        .title {
+            display: grid;
+            grid-template-columns: max-content max-content;
+            justify-content: space-between;
+            align-items: center;
+            height: 30px;
+
+            .action {
+                height:30px;
+                width:30px;
+                transform: rotate(0);
+                cursor: pointer;
+                background-color: white;
+                -webkit-mask: url('../icons/chevron-up.svg') no-repeat 50% 50%;
+                transition: transform .4s;
+            }
+    
+        }
+    }
+
+    .content {
+        padding: 5px 12px;
+        transition-duration: 1s;
+        overflow: hidden;
+        width: 100%;
+    }
+   
+}

@@ -1,0 +1,48 @@
+@import '../../../../../src/assets/styles/theme.scss';
+:host {
+    height: 32px;
+    width: max-content; // @Input() [width]: max-content | auto | 200px
+	display: inline-grid;
+	grid-template-rows: 100%;
+}
+:host .parent {
+    height: 100%;
+	width: 100%;
+	display: inline-grid;
+	grid-auto-flow: column;
+	grid-auto-columns: max-content;
+	grid-template-rows: 100%;
+	grid-column-gap: 8px;
+	align-items: center;
+	justify-content: center;
+    font-size: 13px;
+    border-radius: 5px;
+    padding: 0px 12px;
+    cursor: pointer;
+}
+
+:host(.isDisabled) .parent{
+    pointer-events: none;
+    background-color: rgba(195, 195, 195, 0.667);
+}
+
+:host(.emphasis-high) .parent{
+    background-color: $high-contrast;
+}
+
+:host(.emphasis-medium) .parent{
+    background-color: $medium-contrast;
+}
+
+:host(.emphasis-low) .parent{
+    background-color: $low-contrast;
+}
+
+:host(.emphasis-xlow) .parent{
+    background-color: $xlow-contrast;
+}
+
+:host(.emphasis-xxlow) .parent{
+    background-color: $xxlow-contrast;
+    color:black
+}
